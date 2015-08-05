@@ -16,6 +16,10 @@
 		5B130C881B7144CA0092B631 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B130C871B7144CA0092B631 /* Images.xcassets */; };
 		5B130C8B1B7144CA0092B631 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B130C891B7144CA0092B631 /* LaunchScreen.xib */; };
 		5B130C971B7144CB0092B631 /* BreakingBricksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B130C961B7144CB0092B631 /* BreakingBricksTests.m */; };
+		5B130CA31B71B8B90092B631 /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CA01B71B8B90092B631 /* blip.caf */; };
+		5B130CA41B71B8B90092B631 /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CA11B71B8B90092B631 /* brickhit.caf */; };
+		5B130CA51B71B8B90092B631 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CA21B71B8B90092B631 /* gameover.caf */; };
+		5B130CA81B71C6320092B631 /* EndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B130CA71B71C6320092B631 /* EndScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		5B130C901B7144CB0092B631 /* BreakingBricksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBricksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B130C951B7144CB0092B631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B130C961B7144CB0092B631 /* BreakingBricksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakingBricksTests.m; sourceTree = "<group>"; };
+		5B130CA01B71B8B90092B631 /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
+		5B130CA11B71B8B90092B631 /* brickhit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brickhit.caf; sourceTree = "<group>"; };
+		5B130CA21B71B8B90092B631 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
+		5B130CA61B71C6320092B631 /* EndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndScene.h; sourceTree = "<group>"; };
+		5B130CA71B71C6320092B631 /* EndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,8 @@
 				5B130C7A1B7144CA0092B631 /* AppDelegate.m */,
 				5B130C7C1B7144CA0092B631 /* GameScene.h */,
 				5B130C7D1B7144CA0092B631 /* GameScene.m */,
+				5B130CA61B71C6320092B631 /* EndScene.h */,
+				5B130CA71B71C6320092B631 /* EndScene.m */,
 				5B130C7F1B7144CA0092B631 /* GameScene.sks */,
 				5B130C811B7144CA0092B631 /* GameViewController.h */,
 				5B130C821B7144CA0092B631 /* GameViewController.m */,
@@ -104,6 +115,9 @@
 		5B130C751B7144CA0092B631 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B130CA01B71B8B90092B631 /* blip.caf */,
+				5B130CA11B71B8B90092B631 /* brickhit.caf */,
+				5B130CA21B71B8B90092B631 /* gameover.caf */,
 				5B130C761B7144CA0092B631 /* Info.plist */,
 				5B130C771B7144CA0092B631 /* main.m */,
 			);
@@ -209,7 +223,10 @@
 			files = (
 				5B130C8B1B7144CA0092B631 /* LaunchScreen.xib in Resources */,
 				5B130C881B7144CA0092B631 /* Images.xcassets in Resources */,
+				5B130CA41B71B8B90092B631 /* brickhit.caf in Resources */,
 				5B130C801B7144CA0092B631 /* GameScene.sks in Resources */,
+				5B130CA31B71B8B90092B631 /* blip.caf in Resources */,
+				5B130CA51B71B8B90092B631 /* gameover.caf in Resources */,
 				5B130C861B7144CA0092B631 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +249,7 @@
 				5B130C7B1B7144CA0092B631 /* AppDelegate.m in Sources */,
 				5B130C7E1B7144CA0092B631 /* GameScene.m in Sources */,
 				5B130C781B7144CA0092B631 /* main.m in Sources */,
+				5B130CA81B71C6320092B631 /* EndScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
