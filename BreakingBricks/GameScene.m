@@ -11,9 +11,10 @@
 
 @interface GameScene ()
 
-@property (nonatomic) SKSpriteNode *paddle;
-@property (nonatomic) SKAction     *brickSFX;
-@property (nonatomic) SKAction     *paddleSFX;
+@property (nonatomic) SKSpriteNode  *paddle;
+@property (nonatomic) SKAction      *brickSFX;
+@property (nonatomic) SKAction      *paddleSFX;
+@property (nonatomic) SKEmitterNode *ballEmmiter;
 
 @end
 
@@ -51,8 +52,13 @@ static const uint32_t bottomEdgeCategory   = 16; // 0000000000000000000000000001
     //add notification for when it contacts bricks
     ball.physicsBody.contactTestBitMask = brickCategory | paddleCategory | bottomEdgeCategory;
     
-    // add the sprite node to the scene
+     // add the sprite node to the scene
     [self addChild:ball];
+    
+    //add emmiter
+    self.ballEmmiter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"fireParticle" ofType:@"sks"]];
+    
+    [ball addChild:self.ballEmmiter];
     
     // create the vector
     CGVector myVector = CGVectorMake(10, 10);
@@ -117,7 +123,7 @@ static const uint32_t bottomEdgeCategory   = 16; // 0000000000000000000000000001
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
-    self.backgroundColor = [SKColor whiteColor];
+    self.backgroundColor = [SKColor blackColor];
     
     // add a physics body to the scene
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];

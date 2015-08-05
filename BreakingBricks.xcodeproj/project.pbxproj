@@ -20,6 +20,8 @@
 		5B130CA41B71B8B90092B631 /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CA11B71B8B90092B631 /* brickhit.caf */; };
 		5B130CA51B71B8B90092B631 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CA21B71B8B90092B631 /* gameover.caf */; };
 		5B130CA81B71C6320092B631 /* EndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B130CA71B71C6320092B631 /* EndScene.m */; };
+		5B130CAB1B726A7A0092B631 /* fireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CA91B726A7A0092B631 /* fireParticle.sks */; };
+		5B130CAC1B726A7A0092B631 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B130CAA1B726A7A0092B631 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		5B130CA21B71B8B90092B631 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
 		5B130CA61B71C6320092B631 /* EndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndScene.h; sourceTree = "<group>"; };
 		5B130CA71B71C6320092B631 /* EndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndScene.m; sourceTree = "<group>"; };
+		5B130CA91B726A7A0092B631 /* fireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fireParticle.sks; sourceTree = "<group>"; };
+		5B130CAA1B726A7A0092B631 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				5B130CA61B71C6320092B631 /* EndScene.h */,
 				5B130CA71B71C6320092B631 /* EndScene.m */,
 				5B130C7F1B7144CA0092B631 /* GameScene.sks */,
+				5B130CA91B726A7A0092B631 /* fireParticle.sks */,
+				5B130CAA1B726A7A0092B631 /* spark.png */,
 				5B130C811B7144CA0092B631 /* GameViewController.h */,
 				5B130C821B7144CA0092B631 /* GameViewController.m */,
 				5B130C841B7144CA0092B631 /* Main.storyboard */,
@@ -222,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B130C8B1B7144CA0092B631 /* LaunchScreen.xib in Resources */,
+				5B130CAC1B726A7A0092B631 /* spark.png in Resources */,
+				5B130CAB1B726A7A0092B631 /* fireParticle.sks in Resources */,
 				5B130C881B7144CA0092B631 /* Images.xcassets in Resources */,
 				5B130CA41B71B8B90092B631 /* brickhit.caf in Resources */,
 				5B130C801B7144CA0092B631 /* GameScene.sks in Resources */,
