@@ -24,7 +24,7 @@
     [self addChild:label];
     
     SKLabelNode *tryAgain = [SKLabelNode labelNodeWithFontNamed:@"Futura Medium"];
-    tryAgain.text = @"tap to try again";
+    tryAgain.text = @"tap the screen to try again";
     tryAgain.fontColor = [SKColor whiteColor];
     tryAgain.fontSize = 24;
     tryAgain.position = CGPointMake(CGRectGetMidX(self.frame), -50);
