@@ -36,7 +36,7 @@ static const uint32_t bottomEdgeCategory   = 16; // 0000000000000000000000000001
 
 - (void)addBall {
     // create a new sprite node from an image
-    SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"ball"];
+    SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"roscaBall"];
     
     // create a CGPoint for position
     CGPoint myPoint = CGPointMake(self.frame.size.width/2,self.frame.size.height/2);
@@ -52,16 +52,18 @@ static const uint32_t bottomEdgeCategory   = 16; // 0000000000000000000000000001
     //add notification for when it contacts bricks
     ball.physicsBody.contactTestBitMask = brickCategory | paddleCategory | bottomEdgeCategory;
     
+    ball.scale = 0.15;
+    
      // add the sprite node to the scene
     [self addChild:ball];
     
     //add emmiter
-    self.ballEmmiter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"fireParticle" ofType:@"sks"]];
+    //self.ballEmmiter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"fireParticle" ofType:@"sks"]];
     
-    [ball addChild:self.ballEmmiter];
+    //[ball addChild:self.ballEmmiter];
     
     // create the vector
-    CGVector myVector = CGVectorMake(10, 10);
+    CGVector myVector = CGVectorMake(500, 500);
     // apply the vector
     [ball.physicsBody applyImpulse:myVector];
 }
@@ -95,6 +97,21 @@ static const uint32_t bottomEdgeCategory   = 16; // 0000000000000000000000000001
         
         [self addChild:brick];
     }
+    
+    for (int i = 0; i < 4; i++){
+        SKSpriteNode *brick = [SKSpriteNode spriteNodeWithImageNamed:@"brick"];
+        
+        //add static physics to the body
+        brick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:brick.frame.size];
+        brick.physicsBody.dynamic = NO;
+        brick.physicsBody.categoryBitMask = brickCategory;
+        
+        int xPos = self.frame.size.width/5 * (i+1);
+        int yPos = self.frame.size.height - 100;
+        brick.position = CGPointMake(xPos, yPos);
+        
+        [self addChild:brick];
+    }
 }
 
 #pragma mark SKSceneContactDelegate
@@ -123,7 +140,7 @@ static const uint32_t bottomEdgeCategory   = 16; // 0000000000000000000000000001
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
-    self.backgroundColor = [SKColor blackColor];
+    self.backgroundColor = [SKColor whiteColor];
     
     // add a physics body to the scene
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
